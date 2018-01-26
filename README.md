@@ -1,6 +1,11 @@
 # Running the mono docker container to compile and run a csharp source 
 
-`docker run --rm -v $PWD/src/:/media mono /bin/bash -c "mcs /media/helloworld.cs; mono /media/helloworld.exe floppy"`
+```
+docker run --rm \
+  -v $PWD/src/:/media \
+  mono \
+  /bin/bash -c "mcs /media/helloworld.cs; mono /media/helloworld.exe floppy"
+```
 
 ## Break that down
 * call docker, and remove the container after running
